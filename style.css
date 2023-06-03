@@ -1,0 +1,195 @@
+/* ==UserStyle==
+@name           Tufte AO3
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Tufte CSS inspired stylesheet for AO3/Archive Of Our Own. Only modifies the work skin and nothing else. Recommended font to use: Linux Libertine. This style conflicts with userscript AO3: Fic's Style, Blacklist, Bookmarks.
+@author         Me
+==/UserStyle== */
+@-moz-document domain("archiveofourown.org") {
+  /*  Fonts  */
+  /*  Source Serif Pro  */
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+  /*  EB Garamond  */
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+  /*  Crimson Text  */
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+  :root {
+    --font-family: 'Crimson Text', 'EB Garamond', 'Source Serif Pro', 'Linux Libertine', Georgia, times, serif;
+  }
+  div#workskin {
+    width: 87.5%;
+    margin: 0!important;
+    padding-left: 10.75%;
+    font-family: var(--font-family);
+    max-width: 1400px;
+    font-size: 16px;
+  }
+
+  div.chapter.preface.group {
+    padding-top: 2.5rem;
+  }
+
+  div.preface.group {
+    font-family: var(--font-family);
+    font-size: 16px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  div.preface .summary blockquote:not(.summary),
+  div .notes blockquote {
+    font-size: 16px;
+    font-family: var(--font-family);
+    font-style: italic;
+  }
+
+  .summary + .notes blockquote p {
+    font-style: normal;
+  }
+
+  /*  Uncomment if you want the right sidenotes style  */
+  /*
+  #workskin .notes.module:not(#work_endnotes) {
+    float: right;
+  }
+
+  div.summary + div.notes {
+    display: inline-block;
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+  } 
+  */
+  div#work_endnotes blockquote p,
+  .end.notes.module blockquote p {
+    font-style: normal;
+  }
+
+  div.userstuff {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  div.userstuff > p,
+  div.preface.group,
+  div.userstuff center {
+    width: 58.45%;
+  }
+
+  div.userstuff:not(.summary) p,
+  div.module:not(.news,
+  .messages) blockquote.userstuff:not(.summary,
+  .notes) p,
+  .userstuff dl,
+  .userstuff ol,
+  .userstuff ul {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .userstuff p {
+    margin: 30px 0;
+    padding-right: 0;
+    vertical-align: baseline;
+  }
+
+  div.preface .title,
+  div.preface .byline,
+  div.preface .byline a,
+  div.summary.module h3,
+  div.notes.module h3 {
+    text-align: left;
+    font-family: 'Linux Libertine', times, serif;
+  }
+
+  h1 {
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+
+
+  div.preface h2.title {
+    font-weight: 400;
+    margin-top: 4.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  div.summary.module h3,
+  div.notes.module h3,
+  div.preface .byline,
+  div.preface .byline a,
+  div.preface h3.title {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 2.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+
+  div.module h3.heading {
+    font-size: 21px;
+  }
+
+  div.userstuff hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  @media (max-width: 1281px) {
+    div#workskin {
+      width: 65%;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    div.userstuff > p,
+    div.preface.group,
+    hr,
+    div.userstuff center {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 811px) {
+    div#workskin {
+      width: 84%;
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+
+    div.userstuff > p,
+    div.preface.group,
+    hr,
+    div.userstuff center {
+      width: 100%;
+    }
+
+    blockquote {
+      margin-left: 1.5em;
+      margin-right: 0em;
+    }
+
+    blockquote p,
+    blockquote footer {
+      width: 100%;
+    }
+  }
+}
