@@ -3,13 +3,17 @@ Stylus stylesheet for Archive of our own, inspired by and based on [Tufte CSS](h
 
 This stylesheet only modifies the workskin and nothing else.
 
+## Preview
+
+![Screenshot of Tufte AO3 stylesheet](preview.png)
+
 ## Notes
 Download Linux Libertine font here: https://sourceforge.net/projects/linuxlibertine/
 
 There's a selection of serif fonts available in the code, just edit the variable `--font-family`. You may add your own through Google fonts or other CDN!
 
 This style conflicts with userscript: **AO3: Fic's Style, Blacklist, Bookmarks**
-- Simply disable the Styling feature and this should work
+- Simply disable the _Styling_ feature and this should work
 
 ## Feedback
 
